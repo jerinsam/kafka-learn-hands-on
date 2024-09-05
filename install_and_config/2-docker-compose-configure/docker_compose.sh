@@ -1,4 +1,6 @@
-###### Landoop Kafka container #######
+
+
+###### In this tutorial, Landoop Kafka container will be used #######
 # url : https://hub.docker.com/r/landoop/fast-data-dev 
 # details of the environment mentioned in docker compose yaml file can be found in above link
 
