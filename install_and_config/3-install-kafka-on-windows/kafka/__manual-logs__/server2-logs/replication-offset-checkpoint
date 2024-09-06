@@ -1,0 +1,36 @@
+0
+34
+multi-broker-topic-topic 1 0
+__consumer_offsets 43 0
+multi-replica-topic 6 3
+__consumer_offsets 13 0
+__consumer_offsets 19 0
+__consumer_offsets 25 0
+multi-broker-topic-topic 0 0
+multi-broker-topic 2 3
+__consumer_offsets 37 0
+multi-replica-topic 4 2
+test-topic 1 0
+multi-broker-topic-topic 6 0
+__consumer_offsets 49 0
+__consumer_offsets 40 0
+__consumer_offsets 16 0
+__consumer_offsets 10 0
+multi-replica-topic 3 1
+test-topic 4 0
+__consumer_offsets 7 0
+multi-broker-topic-topic 5 0
+__consumer_offsets 22 0
+multi-replica-topic 2 4
+multi-replica-topic 0 2
+__consumer_offsets 46 0
+multi-replica-topic 5 3
+multi-broker-topic-topic 2 0
+__consumer_offsets 28 0
+__consumer_offsets 4 0
+__consumer_offsets 31 0
+multi-broker-topic-topic 3 0
+multi-broker-topic-topic 4 0
+__consumer_offsets 1 0
+__consumer_offsets 34 0
+multi-replica-topic 1 5

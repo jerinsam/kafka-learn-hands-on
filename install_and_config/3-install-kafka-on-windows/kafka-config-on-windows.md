@@ -59,6 +59,9 @@
         - listeners=PLAINTEXT://localhost:9094 # Listener should be unique for each broker 
         - log.dirs=D:\kafka\__manual-logs__\server2-logs # Add the location of server0-logs folder (created in above step) in log.dirs config propery
 
+###### - In consumer.properties and producer.properties file, change the following property -
+    bootstrap.servers=localhost:9092,localhost:9093,localhost:9094
+
 ###### - Start Zookeeper using below code - change path of zookeeper.properties
     zookeeper-server-start D:\kafka\config\zookeeper.properties
 
