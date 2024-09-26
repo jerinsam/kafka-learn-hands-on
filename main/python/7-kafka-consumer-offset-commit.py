@@ -6,12 +6,12 @@ import json
 
 topic_name='initial-commit-topic'
 
-consumer = KafkaConsumer( 'initial-commit-topic', bootstrap_servers = 'localhost:9092', 
+consumer = KafkaConsumer( topic_name, bootstrap_servers = 'localhost:9092', 
 value_deserializer=lambda m: json.loads(m.decode('utf-8')),auto_offset_reset='earliest' , group_id='lmn-consumer-grp-abcd',
 enable_auto_commit = True, auto_commit_interval_ms = 3000
 )
 
 print(consumer)
 
-for message in consumer:
+for message in consumer: #For loop automatically manages the Polling
     print(message) 

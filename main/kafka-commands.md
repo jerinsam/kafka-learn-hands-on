@@ -41,11 +41,18 @@
 ###### Console kafka Consumer - configure consumer to get the messages from a specific Offset without configuring partition. Below code will throw error, while configuring offset, partition needs to be configured
     kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --offset 1
 
+
 ###### Delete Topic
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
+
 ###### Console kafka Consumer in a consumer group
     kafka-console-consumer --bootstrap-server localhost:9092 --topic consumer-group-topic --from-beginning --group consumer-group-abc
+
+    
+###### Check consumer lag in a consumer group
+    kafka-consumer-groups --bootstrap-server localhost:9092 --group demo-consumer-group --describe
+
 
 ## Spin-up Kafka Cluster with 3 Brokers and test it by creating Topics, Producers and Consumers (for this exercise,  windows version of kafka is used)
 
@@ -83,13 +90,18 @@
 ###### Create a topic with muliple partitions and multiple replication factor
     kafka-topics --create --topic multi-replica-topic --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --replication-factor 3 --partitions 7
 
+
 ###### Describe topic to check which partition is Leader
     kafka-topics --topic multi-replica-topic --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --describe
 
- 
+
 ###### Delete Topic
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
-###### Console kafka Consumer in a consumer group
-    kafka-console-consumer --bootstrap-server localhost:9092 --topic consumer-group-topic --from-beginning --group consumer-group-abc
 
+###### Console Kafka Consumer aggagnment to a consumer group
+    kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic consumer-group-topic --from-beginning --group consumer-group-abc
+
+
+###### Check consumer lag in a consumer group
+    kafka-consumer-groups --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --group demo-consumer-group --describe

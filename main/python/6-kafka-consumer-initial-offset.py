@@ -12,5 +12,5 @@ value_deserializer=lambda m: json.loads(m.decode('utf-8')),auto_offset_reset='ea
 
 print(consumer)
 
-for message in consumer:
+for message in consumer: #For loop automatically manages the Polling
     print(message) 
