@@ -40,4 +40,5 @@ then the partition mentioned will supersede the custom partitioner
 '''
 producer.send(topic_name, key='3', value={'Name': 'HeyParttionBypass'} , partition=2)
 
+producer.flush()
 producer.close()

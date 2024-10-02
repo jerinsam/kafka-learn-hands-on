@@ -18,11 +18,11 @@ for e in range(5):
     print(data)
     try:
         record_metadata =producer.send(topic_name, value=data).get(timeout=10)
-        # print(type(record_metadata)) ##kafka.producer.future.RecordMetadata : future record
-        # print(record_metadata)
-        # print(record_metadata.topic)
-        # print(record_metadata.partition)
-        # print(record_metadata.offset)
+        print(type(record_metadata)) ##kafka.producer.future.RecordMetadata : future record
+        print(record_metadata)
+        print(record_metadata.topic)
+        print(record_metadata.partition)
+        print(record_metadata.offset)
         sleep(0.5)
     except Exception as e:
         print(e)

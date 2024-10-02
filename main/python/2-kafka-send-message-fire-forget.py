@@ -17,3 +17,5 @@ for e in range(100):
     producer.send(topic_name, value=data)
     sleep(0.5)
 
+producer.flush()
+producer.close()

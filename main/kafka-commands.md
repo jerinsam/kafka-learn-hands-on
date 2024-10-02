@@ -46,12 +46,13 @@
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
 
-###### Console kafka Consumer in a consumer group
+###### Console Kafka Consumer assignment to a consumer group
     kafka-console-consumer --bootstrap-server localhost:9092 --topic consumer-group-topic --from-beginning --group consumer-group-abc
 
     
 ###### Check consumer lag in a consumer group
     kafka-consumer-groups --bootstrap-server localhost:9092 --group demo-consumer-group --describe
+
 
 
 ## Spin-up Kafka Cluster with 3 Brokers and test it by creating Topics, Producers and Consumers (for this exercise,  windows version of kafka is used)
@@ -99,9 +100,22 @@
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
 
-###### Console Kafka Consumer aggagnment to a consumer group
+###### Console Kafka Consumer assignment to a consumer group
     kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic consumer-group-topic --from-beginning --group consumer-group-abc
 
 
 ###### Check consumer lag in a consumer group
     kafka-consumer-groups --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --group demo-consumer-group --describe
+
+### Kafka Log Directory file Inspection
+
+###### Inspect log file
+    kafka-run-class kafka.tools.DumpLogSegments --files D:\kafka\__manual-logs__\server-logs\index-file-topic-0/00000000000000000000.log --deep-iteration --print-data-log 
+
+###### Inspect index file
+    kafka-run-class kafka.tools.DumpLogSegments --files D:\kafka\__manual-logs__\server-logs\index-file-topic-0/00000000000000000000.index --deep-iteration --print-data-log 
+
+###### Inspect timeindex file
+    kafka-run-class kafka.tools.DumpLogSegments --files D:\kafka\__manual-logs__\server-logs\index-file-topic-0/00000000000000000000.timeindex --deep-iteration --print-data-log 
+
+    
