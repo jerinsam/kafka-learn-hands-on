@@ -45,15 +45,7 @@
 ###### Delete Topic
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
-
-###### Console Kafka Consumer assignment to a consumer group
-    kafka-console-consumer --bootstrap-server localhost:9092 --topic consumer-group-topic --from-beginning --group consumer-group-abc
-
-    
-###### Check consumer lag in a consumer group
-    kafka-consumer-groups --bootstrap-server localhost:9092 --group demo-consumer-group --describe
-
-
+ 
 
 ## Spin-up Kafka Cluster with 3 Brokers and test it by creating Topics, Producers and Consumers (for this exercise,  windows version of kafka is used)
 
@@ -100,12 +92,14 @@
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
 
+### Consumer Group and Consumer Lag in the group
+
 ###### Console Kafka Consumer assignment to a consumer group
-    kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic consumer-group-topic --from-beginning --group consumer-group-abc
+    kafka-console-consumer --bootstrap-server localhost:9092 --topic consumer-group-topic --from-beginning --group consumer-group-abc
 
 
 ###### Check consumer lag in a consumer group
-    kafka-consumer-groups --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --group demo-consumer-group --describe
+    kafka-consumer-groups --bootstrap-server localhost:9092 --group demo-consumer-group --describe
 
 ### Kafka Log Directory file Inspection
 
@@ -118,4 +112,13 @@
 ###### Inspect timeindex file
     kafka-run-class kafka.tools.DumpLogSegments --files D:\kafka\__manual-logs__\server-logs\index-file-topic-0/00000000000000000000.timeindex --deep-iteration --print-data-log 
 
-    
+### Log Compaction
+###### Create Kafka Topic with Log Compaction
+    kafka-topics --create --topic log-compaction-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --config cleanup.policy=compact --config min.cleanable.dirty.ratio=0.001 --config segment.ms=5000
+
+###### Start the Producer – enable Key Value config 
+    kafka-console-producer --topic log-compaction-topic --bootstrap-server localhost:9092 --property parse.key=true --property key.separator=, 
+
+###### Start the Consumer – enable Key Value config
+    kafka-console-consumer --topic log-compaction-topic --bootstrap-server localhost:9092 --from-beginning --property print.key=true --property key.separator=,
+

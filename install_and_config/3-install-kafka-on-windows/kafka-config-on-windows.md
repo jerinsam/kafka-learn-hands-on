@@ -114,12 +114,29 @@ __Refer link__ : https://stackoverflow.com/questions/34081336/classpath-is-empty
     In each server{0,1,2}.properties files, update an additional property "log.retention.check.interval.ms" - 
     
         Server/ Broker 1 :
-            - log.retention.check.interval.ms=1000 # After 1000 bytes, new log segment (file) will be created 
+            - log.segment.bytes.ms=1000 # After 1000 bytes, new log segment (file) will be created 
 
         Server/ Broker 2 :
-            - log.retention.check.interval.ms=1000 # After 1000 bytes, new log segment (file) will be created
+            - log.segment.bytes=1000 # After 1000 bytes, new log segment (file) will be created
 
         Server/ Broker 3 :
-            - log.retention.check.interval.ms=1000 # After 1000 bytes, new log segment (file) will be created
+            - log.segment.bytes=1000 # After 1000 bytes, new log segment (file) will be created
 
 
+###### - (OR) For Log data retention management, Log retension time/ size property needs to be set -
+    In each server{0,1,2}.properties files, update additional property "log.retention.hours", "log.retention.bytes" and  "log.retention.check.interval.ms" - 
+    
+        Server/ Broker 1 :
+            - log.retention.hours =168 # Log segment will be deleted after 168 hours or 7 days. 
+            - log.retention.bytes =1000 # After 1000 bytes in new log segment, Kafka will start deleting old log segments 
+            - log.retention.check.interval.ms =300000  # Every 5 mins, Kafka will check for any log segment eligible for deletion
+        
+        Server/ Broker 2 :
+            - log.retention.hours =168 # Log segment will be deleted after 168 hours or 7 days. 
+            - log.retention.bytes =1000 # After 1000 bytes in new log segment, Kafka will start deleting old log segments 
+            - log.retention.check.interval.ms =300000  # Every 5 mins, Kafka will check for any log segment eligible for deletion 
+
+        Server/ Broker 3 :
+            - log.retention.hours =168 # Log segment will be deleted after 168 hours or 7 days. 
+            - log.retention.bytes =1000 # After 1000 bytes in new log segment, Kafka will start deleting old log segments 
+            - log.retention.check.interval.ms =300000  # Every 5 mins, Kafka will check for any log segment eligible for deletion 
