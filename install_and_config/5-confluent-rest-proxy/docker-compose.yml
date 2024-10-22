@@ -1,0 +1,16 @@
+---
+version: '3.8'
+services:
+  confluent-rest-proxy:
+    image: confluentinc/cp-kafka-rest:7.5.0 
+    ports:
+      - 8082:8082
+    hostname: confluent-rest-proxy
+    container_name: confluent-rest-proxy
+    environment:
+      KAFKA_REST_HOST_NAME: confluent-rest-proxy
+      # KAFKA_REST_BOOTSTRAP_SERVERS should be the advertised.listener present in kafka broker's server.properties file
+      # While adding host name to advertised.listener in kafka broker's server.properties file, make sure it should be Virtual Box IP which starts with 192.X.X.X:9092
+      KAFKA_REST_BOOTSTRAP_SERVERS: '192.168.100.1:9092'
+      KAFKA_REST_LISTENERS: "http://0.0.0.0:8082" 
+ 

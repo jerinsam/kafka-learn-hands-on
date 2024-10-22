@@ -6,6 +6,8 @@
 #### Get the details of the port from Docker Compose yaml file of Conduktor ####
 # Kafka Broker Bootstrap Server External : localhost:19092
 # Schema Registry External URL : http://localhost:18081
+# Topic "schema_registry-test" is created manually from Conduktor UI
+
  
 from confluent_kafka.schema_registry import SchemaRegistryClient, Schema
 from confluent_kafka.schema_registry.avro import AvroSerializer 
@@ -33,7 +35,7 @@ schema = Schema(record_schema,"AVRO") #confluent requires schema of Type Schema
 schema_id = schema_registry_client.register_schema(subject_name,schema)
 # print(schema_id)
 
-# Create an Avro serializer
+# Create an Avro serializer object using AvroSerializer class
 avro_serializer = AvroSerializer(schema_registry_client, record_schema)
  
 

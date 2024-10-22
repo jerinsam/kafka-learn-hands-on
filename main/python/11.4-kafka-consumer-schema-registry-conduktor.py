@@ -29,12 +29,12 @@ schema_registry_client = SchemaRegistryClient(schema_registry_config)
 registered_schema = schema_registry_client.get_latest_version(subject_name) 
 
 
-# another method to get the latest version of schema from a subject
+# another way to get the latest version of schema from a subject
 # schema_version = schema_registry_client.get_versions(subject_name)
 # schema = schema_registry_client.get_version(subject_name, schema_version[-1]) 
 
  
-# Create an Avro deserializer
+# Create an Avro deserializer object using AvroDeserializer class
 avro_deserializer = AvroDeserializer(schema_registry_client, registered_schema.schema)
  
 
@@ -42,6 +42,8 @@ avro_deserializer = AvroDeserializer(schema_registry_client, registered_schema.s
 sc = SerializationContext(topic_name, MessageField.VALUE)
 
 # create consumer 
+# value deserialization can be done while initializing the consumer or can also be done while processing the message
+
 consumer = KafkaConsumer( topic_name, bootstrap_servers=['localhost:19092'] ,  
 group_id='testingschemaregistry', auto_offset_reset='earliest', enable_auto_commit =False,
 value_deserializer = lambda x: avro_deserializer(x, sc) )
@@ -54,6 +56,10 @@ value_deserializer = lambda x: avro_deserializer(x, sc) )
 
 for message in consumer:
     print(message)
+    
+    # value deserialization can be done while initializing the consumer or can also be done while processing the message as shown below
+    # print("The value is : {}".format(avro_deserializer(message.value, sc))
+    
     print("The value is : {}".format(message.value))
     print("The key is : {}".format(message.key)) 
     tp = TopicPartition(message.topic,message.partition)

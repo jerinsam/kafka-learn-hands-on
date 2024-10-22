@@ -122,3 +122,8 @@
 ###### Start the Consumer – enable Key Value config
     kafka-console-consumer --topic log-compaction-topic --bootstrap-server localhost:9092 --from-beginning --property print.key=true --property key.separator=,
 
+### Confluent REST Proxy
+###### For this exercise- 
+###### - Kafka Broker used is installed locally in Windows
+###### - Docker container of Confluent REST Proxy is used, which needs to be configured. 
+######    - NOTE: Docker container configuration needs advertise listener to talk to Kafka Broker, while doing the configuration lots of error occurred which is documented in Appendix section of the Documentation.
