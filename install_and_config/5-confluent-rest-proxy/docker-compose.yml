@@ -9,8 +9,13 @@ services:
     container_name: confluent-rest-proxy
     environment:
       KAFKA_REST_HOST_NAME: confluent-rest-proxy
-      # KAFKA_REST_BOOTSTRAP_SERVERS should be the advertised.listener present in kafka broker's server.properties file
+
+      # For REST Proxy to communicate with the Kafka Broker, Kafka Broker's advertised.listener should be added in Rest Proxy's config file.
+      # Since Docker container is used, therefore to add Kafka Broker's advertised.listener used container's environmental variable "KAFKA_REST_BOOTSTRAP_SERVERS"
+      # REST PROXY Container's environmental variable "KAFKA_REST_BOOTSTRAP_SERVERS" should be the advertised.listener present in kafka broker's server.properties file
       # While adding host name to advertised.listener in kafka broker's server.properties file, make sure it should be Virtual Box IP which starts with 192.X.X.X:9092
       KAFKA_REST_BOOTSTRAP_SERVERS: '192.168.100.1:9092'
+
+      # While in Producetion, Setup LISTENERS and ADVERTISED LISTENERS for REST PROXY as well
       KAFKA_REST_LISTENERS: "http://0.0.0.0:8082" 
  

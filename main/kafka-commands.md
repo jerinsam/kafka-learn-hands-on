@@ -122,8 +122,58 @@
 ###### Start the Consumer – enable Key Value config
     kafka-console-consumer --topic log-compaction-topic --bootstrap-server localhost:9092 --from-beginning --property print.key=true --property key.separator=,
 
+### Start Kafka Connect Server
+###### kafka connect standalone server can be started using connect-standalone executable, with 2 parameters. 1. details of the worker i.e. the server details and 2. details of the configured connector
+    connect-standalone D:\kafka\config\test-connect-worker.properties D:\kafka\config\test-connect-connector.properties
+
+
 ### Confluent REST Proxy
 ###### For this exercise- 
-###### - Kafka Broker used is installed locally in Windows
-###### - Docker container of Confluent REST Proxy is used, which needs to be configured. 
-######    - NOTE: Docker container configuration needs advertise listener to talk to Kafka Broker, while doing the configuration lots of error occurred which is documented in Appendix section of the Documentation.
+###### - Kafka Broker used for this exercise, is installed locally in Windows.
+###### - Docker container of Confluent REST Proxy is used, which needs to be configured to add Kafka Broker listeners. 
+###### - NOTE: Docker container configuration needs advertise listener to talk to Kafka Broker, while doing the configuration lots of error occurred which is documented in Appendix section of the Documentation.
+
+###### Check List of Topics using REST API
+    http://localhost:8082/topics
+
+###### Send Message to Topic – Use POST Method
+    http://localhost:8082/topics/test-rest-proxy
+
+    HEADER – 
+    Content-Type : application/vnd.kafka.json.v2+json
+
+    BODY – 
+    {"records":[{"value":{"name": "testUser"}}]}
+
+###### Send Multiple Messages to Topic – Use POST Method – Messages is sent in Key Value pairs in records attribute of JSON
+    http://localhost:8082/topics/test-rest-proxy
+
+    HEADER – 
+    Content-Type : application/vnd.kafka.json.v2+json
+
+    BODY – 
+    {
+    "records": [
+        {
+        "key": "3",
+        "value": {
+            "id": "3",
+            "customer_code": "3",
+            "telephone": "888582154",
+            "email": "supplier3@test.com",
+            "language": "EN"        
+        }
+        },
+    {
+        "key": "2",
+        "value": {
+            "id": "2",
+            "customer_code": "2",
+            "telephone": "788682158",
+            "email": "supplier2@test.com",
+            "language": "EN"        
+        }
+        }
+    ]
+    }
+
