@@ -11,13 +11,14 @@ In this exercise, SQL SERVER Source connector will be used
     1.2. Details on enabling CDC can be found in file "sql-query-change-data-capture-config.sql"
 
 ##### STEP 3 - Prepare 2 files that are required to start the kafka connect standalone server
-###### 1. Details of the worker i.e. server details (File Name - test-connect-worker.properties)
+###### 1. Details of the worker i.e. server details (Refer File Name - test-connect-worker.properties)
     1.1. Go to /config/ folder in the Kafka installed directory
     1.2. Copy and Paste /config/connect-standalone.properties and rename it to /config/test-connect-worker.properties
     1.3. Open /config/test-connect-worker.properties and change "plugin.path" to the /lib/ folder present in the Kafka installed directory
     1.4. In /config/test-connect-worker.properties file, change "offset.storage.file.filename" to a path which can be accessed or a path which can be resolved (i.e. correct path name or correctly formatted).
     1.5. Close and save the file
-###### 2. Details of the connector with the configuration details (File Name - test-connect-connector.properties)
+
+###### 2. Details of the connector with the configuration details (Refer File Name - test-connect-connector.properties)
     1.1 Create a file called test-connect-connector.properties, which will contain all the configuration of the connector like DB name, port, CDC enabled table name, connector class etc.
     1.2. While providing the DB host ip address, run command ipconfig and get the latest ip address.
     1.3 While passing the values, make sure spaces does not exist at the end of the property values, else while starting the kafka connect standalone cluster, it will throw error.
@@ -26,7 +27,6 @@ In this exercise, SQL SERVER Source connector will be used
 ##### STEP 4 - Start Kafka Standalone Server using below script
 ###### connect-standalone executable will be used to start the Kafka Standalone Server, above cerated files will be used as the parameter in this script
     connect-standalone D:\kafka\config\test-connect-worker.properties D:\kafka\config\test-connect-connector.properties
-
 
 ### Errors received during the configuration
 ###### 1. Due to leading spaces in the value section of the property "value.converter" & "database.hostname" of the properties files, following errors were occuring. 
