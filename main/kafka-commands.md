@@ -41,11 +41,15 @@
 ###### Console kafka Consumer - configure consumer to get the messages from a specific Offset without configuring partition. Below code will throw error, while configuring offset, partition needs to be configured
     kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --offset 1
 
+###### Alter Topic to increase Partitions
+    kafka-topics --alter --topic multi-replica-topic --bootstrap-server localhost:9092 --partitions 3
+
+###### Check __consumer_offsets topic
+    kafka-console-consumer --bootstrap-server localhost:9092 --topic __consumer_offsets --formatter "kafka.coordinator.group.GroupMetadataManager$OffsetsMessageFormatter" --from-beginning
 
 ###### Delete Topic
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 
 
- 
 
 ## Spin-up Kafka Cluster with 3 Brokers and test it by creating Topics, Producers and Consumers (for this exercise,  windows version of kafka is used)
 
@@ -87,6 +91,12 @@
 ###### Describe topic to check which partition is Leader
     kafka-topics --topic multi-replica-topic --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --describe
 
+
+###### Alter Topic to increase Partitions
+    kafka-topics --alter --topic multi-replica-topic --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --partitions 3
+
+###### Check __consumer_offsets topic
+    kafka-console-consumer --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic __consumer_offsets --formatter "kafka.coordinator.group.GroupMetadataManager$OffsetsMessageFormatter" --from-beginning
 
 ###### Delete Topic
     https://stackoverflow.com/questions/33537950/how-can-i-delete-a-topic-in-apache-kafka 

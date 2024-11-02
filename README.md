@@ -1,8 +1,16 @@
 ## LEARN KAFKA
 **DATA ENGINEERING - LEARN KAFKA SERVICES**
-Learn different services used in Kafka, For this tutorial Landoop and Conduktor with Redpanda Kafka docker distribution is used, along with this Windows Installation of Kafka is also used.
+Learn different services used in Kafka, For this tutorial Landoop, Conduktor with Redpanda Kafka docker distribution and Kafka Windows distribution is used.
 
-#### To install kafka in windows follow below link ####
-- https://www.youtube.com/watch?v=w6A-uDEb7JY&list=PLjfRmoYoxpNrs0VmIq6mOTqXP52RfZdRf&index=2
+**Following Services are covered -**
+1. Kafka Broker
+2. Kafka Producer
+3. Kafka Consumer
+4. Schema Registry
+5. Kafka Connect
+6. Kafka Stream Processing
 
-
+**How to navigate through this Repo -**
+1. Go to folder /main/ and open file kafka.docx
+2. Go through the content of kafka.docx, this will provide detailed information on all the Kafka topics  and path of the python code to follow.
+3. For installation, Follow markdown files or sh file present in each sub-folder of folder /main/python/install_and_config/

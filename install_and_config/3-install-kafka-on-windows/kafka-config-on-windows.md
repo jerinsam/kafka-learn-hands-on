@@ -1,11 +1,13 @@
 ### Kafka on Windows (Standalone)
+###### Refer link to install kafka in windows
+- https://www.youtube.com/watch?v=w6A-uDEb7JY&list=PLjfRmoYoxpNrs0VmIq6mOTqXP52RfZdRf&index=2
 
 ###### - Download binary files of kafka from Apache Kafka site
 - https://kafka.apache.org/downloads
 
 ###### - Unzip the downloaded file and place it at a location
 
-###### - Go to /bin/windows folder and copy the path and add it to the environmental variable
+###### - Go to /bin/windows folder and copy the path and add it to the environmental variable "PATH"
 
 ###### - Create 2 folders for zookeeper logs (zookeeper-logs) and server logs (server-logs)
 

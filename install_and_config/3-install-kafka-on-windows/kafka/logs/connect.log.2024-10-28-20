@@ -1,0 +1,1133 @@
+[2024-10-28 20:56:19,522] INFO Kafka Connect worker initializing ... (org.apache.kafka.connect.cli.AbstractConnectCli:114)
+[2024-10-28 20:56:19,527] INFO WorkerInfo values: 
+	jvm.args = -Xmx256M, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=D:\kafka/logs, -Dlog4j.configuration=file:D:\kafka/config/connect-log4j.properties
+	jvm.spec = Oracle Corporation, Java HotSpot(TM) 64-Bit Server VM, 19.0.2, 19.0.2+7-44
+	jvm.classpath = D:\kafka\libs\activation-1.1.1.jar;D:\kafka\libs\aopalliance-repackaged-2.6.1.jar;D:\kafka\libs\argparse4j-0.7.0.jar;D:\kafka\libs\audience-annotations-0.12.0.jar;D:\kafka\libs\caffeine-2.9.3.jar;D:\kafka\libs\checker-qual-3.19.0.jar;D:\kafka\libs\commons-beanutils-1.9.4.jar;D:\kafka\libs\commons-cli-1.4.jar;D:\kafka\libs\commons-collections-3.2.2.jar;D:\kafka\libs\commons-digester-2.1.jar;D:\kafka\libs\commons-io-2.11.0.jar;D:\kafka\libs\commons-lang3-3.12.0.jar;D:\kafka\libs\commons-logging-1.2.jar;D:\kafka\libs\commons-validator-1.7.jar;D:\kafka\libs\connect-api-3.8.0.jar;D:\kafka\libs\connect-basic-auth-extension-3.8.0.jar;D:\kafka\libs\connect-file-3.8.0.jar;D:\kafka\libs\connect-json-3.8.0.jar;D:\kafka\libs\connect-mirror-3.8.0.jar;D:\kafka\libs\connect-mirror-client-3.8.0.jar;D:\kafka\libs\connect-runtime-3.8.0.jar;D:\kafka\libs\connect-transforms-3.8.0.jar;D:\kafka\libs\error_prone_annotations-2.10.0.jar;D:\kafka\libs\hk2-api-2.6.1.jar;D:\kafka\libs\hk2-locator-2.6.1.jar;D:\kafka\libs\hk2-utils-2.6.1.jar;D:\kafka\libs\jackson-annotations-2.16.2.jar;D:\kafka\libs\jackson-core-2.16.2.jar;D:\kafka\libs\jackson-databind-2.16.2.jar;D:\kafka\libs\jackson-dataformat-csv-2.16.2.jar;D:\kafka\libs\jackson-datatype-jdk8-2.16.2.jar;D:\kafka\libs\jackson-jaxrs-base-2.16.2.jar;D:\kafka\libs\jackson-jaxrs-json-provider-2.16.2.jar;D:\kafka\libs\jackson-module-afterburner-2.16.2.jar;D:\kafka\libs\jackson-module-jaxb-annotations-2.16.2.jar;D:\kafka\libs\jackson-module-scala_2.13-2.16.2.jar;D:\kafka\libs\jakarta.activation-api-1.2.2.jar;D:\kafka\libs\jakarta.annotation-api-1.3.5.jar;D:\kafka\libs\jakarta.inject-2.6.1.jar;D:\kafka\libs\jakarta.validation-api-2.0.2.jar;D:\kafka\libs\jakarta.ws.rs-api-2.1.6.jar;D:\kafka\libs\jakarta.xml.bind-api-2.3.3.jar;D:\kafka\libs\javassist-3.29.2-GA.jar;D:\kafka\libs\javax.activation-api-1.2.0.jar;D:\kafka\libs\javax.annotation-api-1.3.2.jar;D:\kafka\libs\javax.servlet-api-3.1.0.jar;D:\kafka\libs\javax.ws.rs-api-2.1.1.jar;D:\kafka\libs\jaxb-api-2.3.1.jar;D:\kafka\libs\jersey-client-2.39.1.jar;D:\kafka\libs\jersey-common-2.39.1.jar;D:\kafka\libs\jersey-container-servlet-2.39.1.jar;D:\kafka\libs\jersey-container-servlet-core-2.39.1.jar;D:\kafka\libs\jersey-hk2-2.39.1.jar;D:\kafka\libs\jersey-server-2.39.1.jar;D:\kafka\libs\jetty-client-9.4.54.v20240208.jar;D:\kafka\libs\jetty-continuation-9.4.54.v20240208.jar;D:\kafka\libs\jetty-http-9.4.54.v20240208.jar;D:\kafka\libs\jetty-io-9.4.54.v20240208.jar;D:\kafka\libs\jetty-security-9.4.54.v20240208.jar;D:\kafka\libs\jetty-server-9.4.54.v20240208.jar;D:\kafka\libs\jetty-servlet-9.4.54.v20240208.jar;D:\kafka\libs\jetty-servlets-9.4.54.v20240208.jar;D:\kafka\libs\jetty-util-9.4.54.v20240208.jar;D:\kafka\libs\jetty-util-ajax-9.4.54.v20240208.jar;D:\kafka\libs\jline-3.25.1.jar;D:\kafka\libs\jopt-simple-5.0.4.jar;D:\kafka\libs\jose4j-0.9.4.jar;D:\kafka\libs\jsr305-3.0.2.jar;D:\kafka\libs\kafka-clients-3.8.0.jar;D:\kafka\libs\kafka-group-coordinator-3.8.0.jar;D:\kafka\libs\kafka-group-coordinator-api-3.8.0.jar;D:\kafka\libs\kafka-log4j-appender-3.8.0.jar;D:\kafka\libs\kafka-metadata-3.8.0.jar;D:\kafka\libs\kafka-raft-3.8.0.jar;D:\kafka\libs\kafka-server-3.8.0.jar;D:\kafka\libs\kafka-server-common-3.8.0.jar;D:\kafka\libs\kafka-shell-3.8.0.jar;D:\kafka\libs\kafka-storage-3.8.0.jar;D:\kafka\libs\kafka-storage-api-3.8.0.jar;D:\kafka\libs\kafka-streams-3.8.0.jar;D:\kafka\libs\kafka-streams-examples-3.8.0.jar;D:\kafka\libs\kafka-streams-scala_2.13-3.8.0.jar;D:\kafka\libs\kafka-streams-test-utils-3.8.0.jar;D:\kafka\libs\kafka-tools-3.8.0.jar;D:\kafka\libs\kafka-tools-api-3.8.0.jar;D:\kafka\libs\kafka-transaction-coordinator-3.8.0.jar;D:\kafka\libs\kafka_2.13-3.8.0.jar;D:\kafka\libs\lz4-java-1.8.0.jar;D:\kafka\libs\maven-artifact-3.9.6.jar;D:\kafka\libs\metrics-core-2.2.0.jar;D:\kafka\libs\metrics-core-4.1.12.1.jar;D:\kafka\libs\netty-buffer-4.1.110.Final.jar;D:\kafka\libs\netty-codec-4.1.110.Final.jar;D:\kafka\libs\netty-common-4.1.110.Final.jar;D:\kafka\libs\netty-handler-4.1.110.Final.jar;D:\kafka\libs\netty-resolver-4.1.110.Final.jar;D:\kafka\libs\netty-transport-4.1.110.Final.jar;D:\kafka\libs\netty-transport-classes-epoll-4.1.110.Final.jar;D:\kafka\libs\netty-transport-native-epoll-4.1.110.Final.jar;D:\kafka\libs\netty-transport-native-unix-common-4.1.110.Final.jar;D:\kafka\libs\opentelemetry-proto-1.0.0-alpha.jar;D:\kafka\libs\osgi-resource-locator-1.0.3.jar;D:\kafka\libs\paranamer-2.8.jar;D:\kafka\libs\pcollections-4.0.1.jar;D:\kafka\libs\plexus-utils-3.5.1.jar;D:\kafka\libs\protobuf-java-3.23.4.jar;D:\kafka\libs\reflections-0.10.2.jar;D:\kafka\libs\reload4j-1.2.25.jar;D:\kafka\libs\rocksdbjni-7.9.2.jar;D:\kafka\libs\scala-collection-compat_2.13-2.10.0.jar;D:\kafka\libs\scala-java8-compat_2.13-1.0.2.jar;D:\kafka\libs\scala-library-2.13.14.jar;D:\kafka\libs\scala-logging_2.13-3.9.4.jar;D:\kafka\libs\scala-reflect-2.13.14.jar;D:\kafka\libs\slf4j-api-1.7.36.jar;D:\kafka\libs\slf4j-reload4j-1.7.36.jar;D:\kafka\libs\snappy-java-1.1.10.5.jar;D:\kafka\libs\swagger-annotations-2.2.8.jar;D:\kafka\libs\trogdor-3.8.0.jar;D:\kafka\libs\zookeeper-3.8.4.jar;D:\kafka\libs\zookeeper-jute-3.8.4.jar;D:\kafka\libs\zstd-jni-1.5.6-3.jar
+	os.spec = Windows 10, amd64, 10.0
+	os.vcpus = 12
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2024-10-28 20:56:19,531] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.AbstractConnectCli:120)
+[2024-10-28 20:56:19,552] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-api-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,730] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-api-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,732] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-connector-sqlserver-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,736] ERROR Failed to discover SourceConnector in D:\kafka\connect-plugin\debezium-connector-sqlserver-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:183)
+java.lang.NoClassDefFoundError: io/debezium/connector/common/RelationalBaseSourceConnector
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:524)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:427)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:421)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:420)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:116)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:495)
+	at java.base/java.lang.Class.forName(Class.java:474)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.nextProviderClass(ServiceLoader.java:1217)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1228)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:60)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.connector.common.RelationalBaseSourceConnector
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 29 more
+[2024-10-28 20:56:19,762] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-connector-sqlserver-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,762] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,768] INFO Using up-to-date JsonConverter implementation (io.debezium.converters.CloudEventsConverter:118)
+[2024-10-28 20:56:19,789] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.ExtractSchemaToNewRecord Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:56:19,801] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.TimezoneConverter Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:56:19,809] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: Provider io.debezium.transforms.outbox.EventRouter could not be instantiated
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:813)
+	at java.base/java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:729)
+	at java.base/java.util.ServiceLoader$3.next(ServiceLoader.java:1403)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at io.debezium.transforms.outbox.EventRouterDelegate.<init>(EventRouterDelegate.java:70)
+	at io.debezium.transforms.outbox.EventRouter.<init>(EventRouter.java:21)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at java.base/java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:789)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 20 more
+[2024-10-28 20:56:19,813] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.partitions.PartitionRouting Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:56:19,818] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.tracing.ActivateTracingSpan Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:56:19,827] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-core-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,828] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-file-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,835] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-file-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,836] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-kafka-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,846] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-kafka-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,846] INFO Loading plugin from: D:\kafka\connect-plugin\mssql-jdbc-12.4.2.jre8.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,853] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/mssql-jdbc-12.4.2.jre8.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,978] INFO Loading plugin from: classpath (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:19,983] INFO Registered loader: jdk.internal.loader.ClassLoaders$AppClassLoader@3cd1a2f1 (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:19,984] INFO Scanning plugins with ServiceLoaderScanner took 432 ms (org.apache.kafka.connect.runtime.isolation.PluginScanner:70)
+[2024-10-28 20:56:19,985] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-api-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:20,043] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-api-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:20,044] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-connector-sqlserver-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:20,060] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-connector-sqlserver-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:20,061] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:20,182] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate TimezoneConverter: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:56:20,185] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate EventRouter: Failed to invoke plugin constructor (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at io.debezium.transforms.outbox.EventRouterDelegate.<init>(EventRouterDelegate.java:70)
+	at io.debezium.transforms.outbox.EventRouter.<init>(EventRouter.java:21)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 17 more
+[2024-10-28 20:56:20,188] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate ExtractSchemaToNewRecord: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:56:20,191] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate PartitionRouting: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:56:20,195] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate ActivateTracingSpan: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:56:20,199] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-core-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:20,199] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-file-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:20,202] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-file-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:20,202] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-kafka-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:20,206] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-kafka-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:20,206] INFO Loading plugin from: D:\kafka\connect-plugin\mssql-jdbc-12.4.2.jre8.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:20,338] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/mssql-jdbc-12.4.2.jre8.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:20,344] INFO Loading plugin from: classpath (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:56:21,355] INFO Registered loader: jdk.internal.loader.ClassLoaders$AppClassLoader@3cd1a2f1 (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:56:21,356] INFO Scanning plugins with ReflectionScanner took 1371 ms (org.apache.kafka.connect.runtime.isolation.PluginScanner:70)
+[2024-10-28 20:56:21,359] WARN All plugins have ServiceLoader manifests, consider reconfiguring plugin.discovery=service_load (org.apache.kafka.connect.runtime.isolation.Plugins:105)
+[2024-10-28 20:56:21,359] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,359] INFO Added plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,360] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,360] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,360] INFO Added plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,361] INFO Added plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,361] INFO Added plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,361] INFO Added plugin 'org.apache.kafka.connect.transforms.DropHeaders' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,362] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,362] INFO Added plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,362] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertHeader' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,363] INFO Added plugin 'io.debezium.converters.BinaryDataConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,363] INFO Added plugin 'org.apache.kafka.common.config.provider.DirectoryConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,363] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,364] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,364] INFO Added plugin 'org.apache.kafka.connect.transforms.HeaderFrom$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,364] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,365] INFO Added plugin 'io.debezium.transforms.ExtractNewRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,365] INFO Added plugin 'io.debezium.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,365] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,366] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,366] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,366] INFO Added plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,367] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,367] INFO Added plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,367] INFO Added plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,367] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,368] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,368] INFO Added plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,368] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,368] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,369] INFO Added plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,369] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,369] INFO Added plugin 'io.debezium.transforms.HeaderToValue' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,369] INFO Added plugin 'io.debezium.transforms.SchemaChangeEventFilter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,370] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,370] INFO Added plugin 'io.debezium.transforms.ByLogicalTableRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,370] INFO Added plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,371] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,371] INFO Added plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,372] INFO Added plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,373] INFO Added plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,373] INFO Added plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,373] INFO Added plugin 'org.apache.kafka.connect.transforms.HeaderFrom$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,374] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,374] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,375] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,375] INFO Added plugin 'org.apache.kafka.common.config.provider.EnvVarConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,375] INFO Added plugin 'io.debezium.transforms.ExtractChangedRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,376] INFO Added plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,376] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,376] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,378] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,379] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,379] INFO Added plugin 'org.apache.kafka.connect.converters.BooleanConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,379] INFO Added plugin 'io.debezium.connector.sqlserver.rest.DebeziumSqlServerConnectRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,380] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,380] INFO Added plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,380] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,380] INFO Added plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:105)
+[2024-10-28 20:56:21,382] INFO Added alias 'RecordIsTombstone' to plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,383] INFO Added alias 'CloudEventsConverter' to plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,383] INFO Added alias 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,383] INFO Added alias 'FileStreamSource' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,383] INFO Added alias 'EnvVar' to plugin 'org.apache.kafka.common.config.provider.EnvVarConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,384] INFO Added alias 'EnvVarConfigProvider' to plugin 'org.apache.kafka.common.config.provider.EnvVarConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,384] INFO Added alias 'MirrorCheckpointConnector' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,384] INFO Added alias 'Boolean' to plugin 'org.apache.kafka.connect.converters.BooleanConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,384] INFO Added alias 'HeaderToValue' to plugin 'io.debezium.transforms.HeaderToValue' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,385] INFO Added alias 'DebeziumSqlServer' to plugin 'io.debezium.connector.sqlserver.rest.DebeziumSqlServerConnectRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,385] INFO Added alias 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,385] INFO Added alias 'StringConverter' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,385] INFO Added alias 'IntegerConverter' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,386] INFO Added alias 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,386] INFO Added alias 'LongConverter' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,386] INFO Added alias 'DropHeaders' to plugin 'org.apache.kafka.connect.transforms.DropHeaders' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,386] INFO Added alias 'SimpleHeaderConverter' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,387] INFO Added alias 'BinaryData' to plugin 'io.debezium.converters.BinaryDataConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,387] INFO Added alias 'FileStreamSinkConnector' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,388] INFO Added alias 'DirectoryConfigProvider' to plugin 'org.apache.kafka.common.config.provider.DirectoryConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,389] INFO Added alias 'ShortConverter' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,389] INFO Added alias 'CloudEvents' to plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,389] INFO Added alias 'BasicAuthSecurityRestExtension' to plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,389] INFO Added alias 'Simple' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,390] INFO Added alias 'AllConnectorClientConfigOverridePolicy' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,390] INFO Added alias 'ExtractNewRecordState' to plugin 'io.debezium.transforms.ExtractNewRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,390] INFO Added alias 'MirrorSource' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,391] INFO Added alias 'Directory' to plugin 'org.apache.kafka.common.config.provider.DirectoryConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,391] INFO Added alias 'MirrorHeartbeat' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,391] INFO Added alias 'FileStreamSourceConnector' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,391] INFO Added alias 'BooleanConverter' to plugin 'org.apache.kafka.connect.converters.BooleanConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,392] INFO Added alias 'HasHeaderKey' to plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,392] INFO Added alias 'MirrorCheckpoint' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,392] INFO Added alias 'ExtractChangedRecordState' to plugin 'io.debezium.transforms.ExtractChangedRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,392] INFO Added alias 'None' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,393] INFO Added alias 'TimestampRouter' to plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,393] INFO Added alias 'Principal' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,394] INFO Added alias 'All' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,394] INFO Added alias 'JsonConverter' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,395] INFO Added alias 'RegexRouter' to plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,395] INFO Added alias 'NoneConnectorClientConfigOverridePolicy' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,395] INFO Added alias 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,396] INFO Added alias 'ByLogicalTableRouter' to plugin 'io.debezium.transforms.ByLogicalTableRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,396] INFO Added alias 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,397] INFO Added alias 'FileConfigProvider' to plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,397] INFO Added alias 'SchemaChangeEventFilter' to plugin 'io.debezium.transforms.SchemaChangeEventFilter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,397] INFO Added alias 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,398] INFO Added alias 'File' to plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,398] INFO Added alias 'FloatConverter' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,398] INFO Added alias 'FileStreamSink' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,398] INFO Added alias 'DoubleConverter' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,398] INFO Added alias 'DebeziumSqlServerConnectRestExtension' to plugin 'io.debezium.connector.sqlserver.rest.DebeziumSqlServerConnectRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,399] INFO Added alias 'BinaryDataConverter' to plugin 'io.debezium.converters.BinaryDataConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,399] INFO Added alias 'TopicNameMatches' to plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,399] INFO Added alias 'MirrorHeartbeatConnector' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,399] INFO Added alias 'InsertHeader' to plugin 'org.apache.kafka.connect.transforms.InsertHeader' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,399] INFO Added alias 'MirrorSourceConnector' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,400] INFO Added alias 'PrincipalConnectorClientConfigOverridePolicy' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,400] INFO Added alias 'ValueToKey' to plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,400] INFO Added alias 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,400] INFO Added alias 'Filter' to plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:109)
+[2024-10-28 20:56:21,411] INFO StandaloneConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 10000
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = /tmp/connect.offsets
+	plugin.discovery = hybrid_warn
+	plugin.path = [D:/kafka/connect-plugin/]
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.standalone.StandaloneConfig:372)
+[2024-10-28 20:56:21,415] INFO Creating Kafka admin client (org.apache.kafka.connect.runtime.WorkerConfig:283)
+[2024-10-28 20:56:21,419] INFO AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:372)
+[2024-10-28 20:56:21,515] INFO These configurations '[offset.flush.interval.ms, key.converter.schemas.enable, offset.storage.file.filename, value.converter.schemas.enable, plugin.path, value.converter, key.converter]' were supplied but are not used yet. (org.apache.kafka.clients.admin.AdminClientConfig:381)
+[2024-10-28 20:56:21,516] INFO Kafka version: 3.8.0 (org.apache.kafka.common.utils.AppInfoParser:124)
+[2024-10-28 20:56:21,516] INFO Kafka commitId: 771b9576b00ecf5b (org.apache.kafka.common.utils.AppInfoParser:125)
+[2024-10-28 20:56:21,517] INFO Kafka startTimeMs: 1730129181516 (org.apache.kafka.common.utils.AppInfoParser:126)
+[2024-10-28 20:56:21,784] INFO Kafka cluster ID: IxEMB1wxSCecWlc39CQqjw (org.apache.kafka.connect.runtime.WorkerConfig:300)
+[2024-10-28 20:56:21,785] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser:88)
+[2024-10-28 20:56:21,791] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:684)
+[2024-10-28 20:56:21,791] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:688)
+[2024-10-28 20:56:21,792] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:694)
+[2024-10-28 20:56:21,796] INFO PublicConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	listeners = [http://:8083]
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+ (org.apache.kafka.connect.runtime.rest.RestServerConfig$PublicConfig:372)
+[2024-10-28 20:56:21,804] INFO Logging initialized @2952ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log:170)
+[2024-10-28 20:56:21,836] INFO Added connector for http://:8083 (org.apache.kafka.connect.runtime.rest.RestServer:121)
+[2024-10-28 20:56:21,836] INFO Initializing REST server (org.apache.kafka.connect.runtime.rest.RestServer:192)
+[2024-10-28 20:56:21,861] INFO jetty-9.4.54.v20240208; built: 2024-02-08T19:42:39.027Z; git: cef3fbd6d736a21e7d541a5db490381d95a2047d; jvm 19.0.2+7-44 (org.eclipse.jetty.server.Server:375)
+[2024-10-28 20:56:21,895] INFO Started http_8083@130a6eb9{HTTP/1.1, (http/1.1)}{0.0.0.0:8083} (org.eclipse.jetty.server.AbstractConnector:333)
+[2024-10-28 20:56:21,896] INFO Started @3044ms (org.eclipse.jetty.server.Server:415)
+[2024-10-28 20:56:21,913] INFO Advertised URI: http://10.10.13.34:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:412)
+[2024-10-28 20:56:21,913] INFO REST server listening at http://10.10.13.34:8083/, advertising URL http://10.10.13.34:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:212)
+[2024-10-28 20:56:21,914] INFO Advertised URI: http://10.10.13.34:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:412)
+[2024-10-28 20:56:21,914] INFO REST admin endpoints at http://10.10.13.34:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:215)
+[2024-10-28 20:56:21,914] INFO Advertised URI: http://10.10.13.34:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:412)
+[2024-10-28 20:56:21,915] INFO Setting up All Policy for ConnectorClientConfigOverride. This will allow all client configurations to be overridden (org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy:44)
+[2024-10-28 20:56:21,916] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	replace.null.with.default = true
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2024-10-28 20:56:21,927] INFO Kafka version: 3.8.0 (org.apache.kafka.common.utils.AppInfoParser:124)
+[2024-10-28 20:56:21,927] INFO Kafka commitId: 771b9576b00ecf5b (org.apache.kafka.common.utils.AppInfoParser:125)
+[2024-10-28 20:56:21,927] INFO Kafka startTimeMs: 1730129181927 (org.apache.kafka.common.utils.AppInfoParser:126)
+[2024-10-28 20:56:21,933] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	replace.null.with.default = true
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2024-10-28 20:56:21,933] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	replace.null.with.default = true
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2024-10-28 20:56:21,941] INFO Kafka Connect worker initialization took 2418ms (org.apache.kafka.connect.cli.AbstractConnectCli:141)
+[2024-10-28 20:56:21,942] INFO Kafka Connect starting (org.apache.kafka.connect.runtime.Connect:51)
+[2024-10-28 20:56:21,943] INFO Herder starting (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:108)
+[2024-10-28 20:56:21,943] INFO Worker starting (org.apache.kafka.connect.runtime.Worker:232)
+[2024-10-28 20:56:21,944] INFO Starting FileOffsetBackingStore with file \tmp\connect.offsets (org.apache.kafka.connect.storage.FileOffsetBackingStore:63)
+[2024-10-28 20:56:21,946] INFO Worker started (org.apache.kafka.connect.runtime.Worker:242)
+[2024-10-28 20:56:21,947] INFO Herder started (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:111)
+[2024-10-28 20:56:21,947] INFO Initializing REST resources (org.apache.kafka.connect.runtime.rest.RestServer:219)
+[2024-10-28 20:56:21,973] INFO Adding admin resources to main listener (org.apache.kafka.connect.runtime.rest.RestServer:234)
+[2024-10-28 20:56:22,005] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session:334)
+[2024-10-28 20:56:22,006] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session:339)
+[2024-10-28 20:56:22,008] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session:132)
+[2024-10-28 20:56:22,360] INFO Started o.e.j.s.ServletContextHandler@22b82ddf{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler:921)
+[2024-10-28 20:56:22,361] INFO REST resources initialized; server is started and ready to handle requests (org.apache.kafka.connect.runtime.rest.RestServer:299)
+[2024-10-28 20:56:22,361] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect:57)
+[2024-10-28 20:56:22,379] ERROR Failed to create connector for D:\kafka\config\test-connect-connector.properties (org.apache.kafka.connect.cli.ConnectStandalone:85)
+[2024-10-28 20:56:22,380] ERROR Stopping after connector error (org.apache.kafka.connect.cli.ConnectStandalone:96)
+java.util.concurrent.ExecutionException: org.apache.kafka.connect.errors.ConnectException: Failed to find any class that implements Connector and which name matches io.debezium.connector.sqlserver.SqlServerConnector, available connectors are: PluginDesc{klass=class org.apache.kafka.connect.file.FileStreamSinkConnector, name='org.apache.kafka.connect.file.FileStreamSinkConnector', version='3.8.0', encodedVersion=3.8.0, type=sink, typeName='sink', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.file.FileStreamSourceConnector, name='org.apache.kafka.connect.file.FileStreamSourceConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.mirror.MirrorCheckpointConnector, name='org.apache.kafka.connect.mirror.MirrorCheckpointConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.mirror.MirrorHeartbeatConnector, name='org.apache.kafka.connect.mirror.MirrorHeartbeatConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.mirror.MirrorSourceConnector, name='org.apache.kafka.connect.mirror.MirrorSourceConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}
+	at org.apache.kafka.connect.util.ConvertingFutureCallback.result(ConvertingFutureCallback.java:135)
+	at org.apache.kafka.connect.util.ConvertingFutureCallback.get(ConvertingFutureCallback.java:108)
+	at org.apache.kafka.connect.cli.ConnectStandalone.processExtraArgs(ConnectStandalone.java:93)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:150)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: org.apache.kafka.connect.errors.ConnectException: Failed to find any class that implements Connector and which name matches io.debezium.connector.sqlserver.SqlServerConnector, available connectors are: PluginDesc{klass=class org.apache.kafka.connect.file.FileStreamSinkConnector, name='org.apache.kafka.connect.file.FileStreamSinkConnector', version='3.8.0', encodedVersion=3.8.0, type=sink, typeName='sink', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.file.FileStreamSourceConnector, name='org.apache.kafka.connect.file.FileStreamSourceConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.mirror.MirrorCheckpointConnector, name='org.apache.kafka.connect.mirror.MirrorCheckpointConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.mirror.MirrorHeartbeatConnector, name='org.apache.kafka.connect.mirror.MirrorHeartbeatConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}, PluginDesc{klass=class org.apache.kafka.connect.mirror.MirrorSourceConnector, name='org.apache.kafka.connect.mirror.MirrorSourceConnector', version='3.8.0', encodedVersion=3.8.0, type=source, typeName='source', location='classpath'}
+	at org.apache.kafka.connect.runtime.isolation.Plugins.connectorClass(Plugins.java:320)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.newConnector(Plugins.java:291)
+	at org.apache.kafka.connect.runtime.AbstractHerder.lambda$getConnector$7(AbstractHerder.java:949)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.kafka.connect.runtime.AbstractHerder.getConnector(AbstractHerder.java:949)
+	at org.apache.kafka.connect.runtime.AbstractHerder.validateConnectorConfig(AbstractHerder.java:662)
+	at org.apache.kafka.connect.runtime.AbstractHerder.lambda$validateConnectorConfig$3(AbstractHerder.java:574)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+[2024-10-28 20:56:22,382] INFO Kafka Connect stopping (org.apache.kafka.connect.runtime.Connect:67)
+[2024-10-28 20:56:22,382] INFO Stopping REST server (org.apache.kafka.connect.runtime.rest.RestServer:354)
+[2024-10-28 20:56:22,387] INFO Stopped o.e.j.s.ServletContextHandler@22b82ddf{/,null,STOPPED} (org.eclipse.jetty.server.handler.ContextHandler:1159)
+[2024-10-28 20:56:22,394] INFO Stopped http_8083@130a6eb9{HTTP/1.1, (http/1.1)}{0.0.0.0:8083} (org.eclipse.jetty.server.AbstractConnector:383)
+[2024-10-28 20:56:22,395] INFO node0 Stopped scavenging (org.eclipse.jetty.server.session:149)
+[2024-10-28 20:56:22,396] INFO REST server stopped (org.apache.kafka.connect.runtime.rest.RestServer:383)
+[2024-10-28 20:56:22,396] INFO Herder stopping (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:116)
+[2024-10-28 20:56:22,397] INFO Worker stopping (org.apache.kafka.connect.runtime.Worker:249)
+[2024-10-28 20:56:22,397] INFO Stopped FileOffsetBackingStore (org.apache.kafka.connect.storage.FileOffsetBackingStore:71)
+[2024-10-28 20:56:22,397] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:684)
+[2024-10-28 20:56:22,398] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:688)
+[2024-10-28 20:56:22,398] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:694)
+[2024-10-28 20:56:22,398] INFO App info kafka.connect for 10.10.13.34:8083 unregistered (org.apache.kafka.common.utils.AppInfoParser:88)
+[2024-10-28 20:56:22,399] INFO Worker stopped (org.apache.kafka.connect.runtime.Worker:270)
+[2024-10-28 20:56:22,399] INFO Herder stopped (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:127)
+[2024-10-28 20:56:22,400] INFO Kafka Connect stopped (org.apache.kafka.connect.runtime.Connect:72)
+[2024-10-28 20:59:58,921] INFO Kafka Connect worker initializing ... (org.apache.kafka.connect.cli.AbstractConnectCli:114)
+[2024-10-28 20:59:58,925] INFO WorkerInfo values: 
+	jvm.args = -Xmx256M, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=D:\kafka/logs, -Dlog4j.configuration=file:D:\kafka/config/connect-log4j.properties
+	jvm.spec = Oracle Corporation, Java HotSpot(TM) 64-Bit Server VM, 19.0.2, 19.0.2+7-44
+	jvm.classpath = D:\kafka\libs\activation-1.1.1.jar;D:\kafka\libs\aopalliance-repackaged-2.6.1.jar;D:\kafka\libs\argparse4j-0.7.0.jar;D:\kafka\libs\audience-annotations-0.12.0.jar;D:\kafka\libs\caffeine-2.9.3.jar;D:\kafka\libs\checker-qual-3.19.0.jar;D:\kafka\libs\commons-beanutils-1.9.4.jar;D:\kafka\libs\commons-cli-1.4.jar;D:\kafka\libs\commons-collections-3.2.2.jar;D:\kafka\libs\commons-digester-2.1.jar;D:\kafka\libs\commons-io-2.11.0.jar;D:\kafka\libs\commons-lang3-3.12.0.jar;D:\kafka\libs\commons-logging-1.2.jar;D:\kafka\libs\commons-validator-1.7.jar;D:\kafka\libs\connect-api-3.8.0.jar;D:\kafka\libs\connect-basic-auth-extension-3.8.0.jar;D:\kafka\libs\connect-file-3.8.0.jar;D:\kafka\libs\connect-json-3.8.0.jar;D:\kafka\libs\connect-mirror-3.8.0.jar;D:\kafka\libs\connect-mirror-client-3.8.0.jar;D:\kafka\libs\connect-runtime-3.8.0.jar;D:\kafka\libs\connect-transforms-3.8.0.jar;D:\kafka\libs\error_prone_annotations-2.10.0.jar;D:\kafka\libs\hk2-api-2.6.1.jar;D:\kafka\libs\hk2-locator-2.6.1.jar;D:\kafka\libs\hk2-utils-2.6.1.jar;D:\kafka\libs\jackson-annotations-2.16.2.jar;D:\kafka\libs\jackson-core-2.16.2.jar;D:\kafka\libs\jackson-databind-2.16.2.jar;D:\kafka\libs\jackson-dataformat-csv-2.16.2.jar;D:\kafka\libs\jackson-datatype-jdk8-2.16.2.jar;D:\kafka\libs\jackson-jaxrs-base-2.16.2.jar;D:\kafka\libs\jackson-jaxrs-json-provider-2.16.2.jar;D:\kafka\libs\jackson-module-afterburner-2.16.2.jar;D:\kafka\libs\jackson-module-jaxb-annotations-2.16.2.jar;D:\kafka\libs\jackson-module-scala_2.13-2.16.2.jar;D:\kafka\libs\jakarta.activation-api-1.2.2.jar;D:\kafka\libs\jakarta.annotation-api-1.3.5.jar;D:\kafka\libs\jakarta.inject-2.6.1.jar;D:\kafka\libs\jakarta.validation-api-2.0.2.jar;D:\kafka\libs\jakarta.ws.rs-api-2.1.6.jar;D:\kafka\libs\jakarta.xml.bind-api-2.3.3.jar;D:\kafka\libs\javassist-3.29.2-GA.jar;D:\kafka\libs\javax.activation-api-1.2.0.jar;D:\kafka\libs\javax.annotation-api-1.3.2.jar;D:\kafka\libs\javax.servlet-api-3.1.0.jar;D:\kafka\libs\javax.ws.rs-api-2.1.1.jar;D:\kafka\libs\jaxb-api-2.3.1.jar;D:\kafka\libs\jersey-client-2.39.1.jar;D:\kafka\libs\jersey-common-2.39.1.jar;D:\kafka\libs\jersey-container-servlet-2.39.1.jar;D:\kafka\libs\jersey-container-servlet-core-2.39.1.jar;D:\kafka\libs\jersey-hk2-2.39.1.jar;D:\kafka\libs\jersey-server-2.39.1.jar;D:\kafka\libs\jetty-client-9.4.54.v20240208.jar;D:\kafka\libs\jetty-continuation-9.4.54.v20240208.jar;D:\kafka\libs\jetty-http-9.4.54.v20240208.jar;D:\kafka\libs\jetty-io-9.4.54.v20240208.jar;D:\kafka\libs\jetty-security-9.4.54.v20240208.jar;D:\kafka\libs\jetty-server-9.4.54.v20240208.jar;D:\kafka\libs\jetty-servlet-9.4.54.v20240208.jar;D:\kafka\libs\jetty-servlets-9.4.54.v20240208.jar;D:\kafka\libs\jetty-util-9.4.54.v20240208.jar;D:\kafka\libs\jetty-util-ajax-9.4.54.v20240208.jar;D:\kafka\libs\jline-3.25.1.jar;D:\kafka\libs\jopt-simple-5.0.4.jar;D:\kafka\libs\jose4j-0.9.4.jar;D:\kafka\libs\jsr305-3.0.2.jar;D:\kafka\libs\kafka-clients-3.8.0.jar;D:\kafka\libs\kafka-group-coordinator-3.8.0.jar;D:\kafka\libs\kafka-group-coordinator-api-3.8.0.jar;D:\kafka\libs\kafka-log4j-appender-3.8.0.jar;D:\kafka\libs\kafka-metadata-3.8.0.jar;D:\kafka\libs\kafka-raft-3.8.0.jar;D:\kafka\libs\kafka-server-3.8.0.jar;D:\kafka\libs\kafka-server-common-3.8.0.jar;D:\kafka\libs\kafka-shell-3.8.0.jar;D:\kafka\libs\kafka-storage-3.8.0.jar;D:\kafka\libs\kafka-storage-api-3.8.0.jar;D:\kafka\libs\kafka-streams-3.8.0.jar;D:\kafka\libs\kafka-streams-examples-3.8.0.jar;D:\kafka\libs\kafka-streams-scala_2.13-3.8.0.jar;D:\kafka\libs\kafka-streams-test-utils-3.8.0.jar;D:\kafka\libs\kafka-tools-3.8.0.jar;D:\kafka\libs\kafka-tools-api-3.8.0.jar;D:\kafka\libs\kafka-transaction-coordinator-3.8.0.jar;D:\kafka\libs\kafka_2.13-3.8.0.jar;D:\kafka\libs\lz4-java-1.8.0.jar;D:\kafka\libs\maven-artifact-3.9.6.jar;D:\kafka\libs\metrics-core-2.2.0.jar;D:\kafka\libs\metrics-core-4.1.12.1.jar;D:\kafka\libs\netty-buffer-4.1.110.Final.jar;D:\kafka\libs\netty-codec-4.1.110.Final.jar;D:\kafka\libs\netty-common-4.1.110.Final.jar;D:\kafka\libs\netty-handler-4.1.110.Final.jar;D:\kafka\libs\netty-resolver-4.1.110.Final.jar;D:\kafka\libs\netty-transport-4.1.110.Final.jar;D:\kafka\libs\netty-transport-classes-epoll-4.1.110.Final.jar;D:\kafka\libs\netty-transport-native-epoll-4.1.110.Final.jar;D:\kafka\libs\netty-transport-native-unix-common-4.1.110.Final.jar;D:\kafka\libs\opentelemetry-proto-1.0.0-alpha.jar;D:\kafka\libs\osgi-resource-locator-1.0.3.jar;D:\kafka\libs\paranamer-2.8.jar;D:\kafka\libs\pcollections-4.0.1.jar;D:\kafka\libs\plexus-utils-3.5.1.jar;D:\kafka\libs\protobuf-java-3.23.4.jar;D:\kafka\libs\reflections-0.10.2.jar;D:\kafka\libs\reload4j-1.2.25.jar;D:\kafka\libs\rocksdbjni-7.9.2.jar;D:\kafka\libs\scala-collection-compat_2.13-2.10.0.jar;D:\kafka\libs\scala-java8-compat_2.13-1.0.2.jar;D:\kafka\libs\scala-library-2.13.14.jar;D:\kafka\libs\scala-logging_2.13-3.9.4.jar;D:\kafka\libs\scala-reflect-2.13.14.jar;D:\kafka\libs\slf4j-api-1.7.36.jar;D:\kafka\libs\slf4j-reload4j-1.7.36.jar;D:\kafka\libs\snappy-java-1.1.10.5.jar;D:\kafka\libs\swagger-annotations-2.2.8.jar;D:\kafka\libs\trogdor-3.8.0.jar;D:\kafka\libs\zookeeper-3.8.4.jar;D:\kafka\libs\zookeeper-jute-3.8.4.jar;D:\kafka\libs\zstd-jni-1.5.6-3.jar
+	os.spec = Windows 10, amd64, 10.0
+	os.vcpus = 12
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2024-10-28 20:59:58,929] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.AbstractConnectCli:120)
+[2024-10-28 20:59:58,947] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-api-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,133] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-api-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,134] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-connector-sqlserver-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,138] ERROR Failed to discover SourceConnector in D:\kafka\connect-plugin\debezium-connector-sqlserver-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:183)
+java.lang.NoClassDefFoundError: io/debezium/connector/common/RelationalBaseSourceConnector
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:524)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:427)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:421)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:420)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:116)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:495)
+	at java.base/java.lang.Class.forName(Class.java:474)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.nextProviderClass(ServiceLoader.java:1217)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1228)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:60)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.connector.common.RelationalBaseSourceConnector
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 29 more
+[2024-10-28 20:59:59,160] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-connector-sqlserver-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,161] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,167] INFO Using up-to-date JsonConverter implementation (io.debezium.converters.CloudEventsConverter:118)
+[2024-10-28 20:59:59,185] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.ExtractSchemaToNewRecord Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:59:59,195] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.TimezoneConverter Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:59:59,200] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: Provider io.debezium.transforms.outbox.EventRouter could not be instantiated
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:813)
+	at java.base/java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:729)
+	at java.base/java.util.ServiceLoader$3.next(ServiceLoader.java:1403)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at io.debezium.transforms.outbox.EventRouterDelegate.<init>(EventRouterDelegate.java:70)
+	at io.debezium.transforms.outbox.EventRouter.<init>(EventRouter.java:21)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at java.base/java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:789)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 20 more
+[2024-10-28 20:59:59,204] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.partitions.PartitionRouting Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:59:59,206] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.PluginScanner:138)
+java.util.ServiceConfigurationError: org.apache.kafka.connect.transforms.Transformation: io.debezium.transforms.tracing.ActivateTracingSpan Unable to get public no-arg constructor
+	at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:586)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:679)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1240)
+	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1273)
+	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1309)
+	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1393)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.handleLinkageError(PluginScanner.java:176)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.getServiceLoaderPluginDesc(PluginScanner.java:132)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.getTransformationPluginDesc(ServiceLoaderScanner.java:78)
+	at org.apache.kafka.connect.runtime.isolation.ServiceLoaderScanner.scanPlugins(ServiceLoaderScanner.java:63)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:83)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getConstructor(Class.java:2324)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:666)
+	at java.base/java.util.ServiceLoader$1.run(ServiceLoader.java:663)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ServiceLoader.getConstructor(ServiceLoader.java:674)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 24 more
+[2024-10-28 20:59:59,212] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-core-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,212] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-file-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,220] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-file-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,221] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-kafka-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,227] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-kafka-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,227] INFO Loading plugin from: D:\kafka\connect-plugin\mssql-jdbc-12.4.2.jre8.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,234] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/mssql-jdbc-12.4.2.jre8.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,311] INFO Loading plugin from: classpath (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,317] INFO Registered loader: jdk.internal.loader.ClassLoaders$AppClassLoader@3cd1a2f1 (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,318] INFO Scanning plugins with ServiceLoaderScanner took 372 ms (org.apache.kafka.connect.runtime.isolation.PluginScanner:70)
+[2024-10-28 20:59:59,320] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-api-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,369] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-api-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,370] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-connector-sqlserver-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,387] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-connector-sqlserver-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,388] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,497] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate TimezoneConverter: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:59:59,500] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate EventRouter: Failed to invoke plugin constructor (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at io.debezium.transforms.outbox.EventRouterDelegate.<init>(EventRouterDelegate.java:70)
+	at io.debezium.transforms.outbox.EventRouter.<init>(EventRouter.java:21)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 17 more
+[2024-10-28 20:59:59,503] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate ExtractSchemaToNewRecord: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:59:59,507] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate PartitionRouting: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:59:59,509] ERROR Failed to discover Transformation in D:\kafka\connect-plugin\debezium-core-2.5.4.Final.jar: Unable to instantiate ActivateTracingSpan: Plugin class has a dependency which is missing or invalid (org.apache.kafka.connect.runtime.isolation.ReflectionScanner:138)
+java.lang.NoClassDefFoundError: io/debezium/DebeziumException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429)
+	at java.base/java.lang.Class.getConstructor0(Class.java:3634)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2810)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.versionFor(ReflectionScanner.java:73)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getPluginDesc(ReflectionScanner.java:136)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.getTransformationPluginDesc(ReflectionScanner.java:106)
+	at org.apache.kafka.connect.runtime.isolation.ReflectionScanner.scanPlugins(ReflectionScanner.java:91)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.scanUrlsAndAddPlugins(PluginScanner.java:79)
+	at org.apache.kafka.connect.runtime.isolation.PluginScanner.discoverPlugins(PluginScanner.java:67)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.initLoaders(Plugins.java:91)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:75)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.<init>(Plugins.java:64)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.startConnect(AbstractConnectCli.java:121)
+	at org.apache.kafka.connect.cli.AbstractConnectCli.run(AbstractConnectCli.java:94)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:182)
+Caused by: java.lang.ClassNotFoundException: io.debezium.DebeziumException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at org.apache.kafka.connect.runtime.isolation.PluginClassLoader.loadClass(PluginClassLoader.java:124)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 16 more
+[2024-10-28 20:59:59,513] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-core-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,513] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-file-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,517] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-file-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,518] INFO Loading plugin from: D:\kafka\connect-plugin\debezium-storage-kafka-2.5.4.Final.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,522] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/debezium-storage-kafka-2.5.4.Final.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,523] INFO Loading plugin from: D:\kafka\connect-plugin\mssql-jdbc-12.4.2.jre8.jar (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
+[2024-10-28 20:59:59,646] INFO Registered loader: PluginClassLoader{pluginLocation=file:/D:/kafka/connect-plugin/mssql-jdbc-12.4.2.jre8.jar} (org.apache.kafka.connect.runtime.isolation.PluginScanner:80)
+[2024-10-28 20:59:59,655] INFO Loading plugin from: classpath (org.apache.kafka.connect.runtime.isolation.PluginScanner:75)
