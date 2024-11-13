@@ -1,6 +1,6 @@
 ### Configure Git
 
-#### Initialize a repo and then push to github
+#### Initialize a local repo
 	git init
 
 #### Clone a Github repo to local
@@ -27,10 +27,20 @@
 		token : XXXXXXXXXX-XXXXXXXXXXXXX-XXXXXXXXX
 
 #### Create new branch 
+	# Create new branch
+	git branch new-branch
+	
+	# Switch from one branch to new branch
+	git checkout new-branch
+	
+	# Single line code to create new branch and switch to it.
+	git checkout -b NEW_BRANCH_NAME
 
 ##### Identify new changes in the Origin i.e. remote (github) repo
 	git fetch origin
+	
 ##### Update local repo with any change in remote repo
 	git pull origin main
+
 ##### Checkout to create new dev branch 
 	git checkout -b dev
