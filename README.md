@@ -1,6 +1,6 @@
 ## LEARN KAFKA
 **DATA ENGINEERING - LEARN KAFKA SERVICES**
-Learn different services used in Kafka, For this tutorial Landoop, Conduktor with Redpanda Kafka docker distribution and Kafka Windows distribution is used.
+This repo is used to learn different services used in Kafka, For this tutorial Landoop, Conduktor with Redpanda Kafka docker distribution and Kafka Windows distribution is used.
 
 **Following Services are covered -**
 1. Kafka Broker
